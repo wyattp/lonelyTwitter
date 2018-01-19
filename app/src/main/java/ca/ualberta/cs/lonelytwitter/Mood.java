@@ -9,16 +9,21 @@ import java.util.Date;
 public abstract class Mood {
 
     private Date date;
+    private String mood;
 
-    public Mood(Date date) {
+    public Mood(String mood, Date date) {
         this.date = date;
+        this.mood = mood;
     }
 
-    public Mood() {
+    public Mood(String mood) {
         this.date = new Date();
+        this.mood = mood;
     }
 
-    public abstract String getMood();
+    public String getMood() {
+        return this.mood;
+    }
 
     public Date getDate() {
         return date;
