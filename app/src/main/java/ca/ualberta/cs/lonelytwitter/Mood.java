@@ -7,7 +7,7 @@ import java.util.Date;
  */
 
 public abstract class Mood {
-
+/*
     private Date date;
 
     public Mood(Date date) {
@@ -27,5 +27,5 @@ public abstract class Mood {
     public void setDate(Date date) {
         this.date = date;
     }
-
+*/
 }
