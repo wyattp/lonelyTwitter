@@ -7,7 +7,7 @@ import java.util.Date;
  */
 
 public class SadMood extends Mood {
-/*
+
     public SadMood(Date date) {
         super(date);
     }
@@ -19,5 +19,5 @@ public class SadMood extends Mood {
     public String getMood() {
         return "Sad";
     }
-*/
+
 }

@@ -11,7 +11,7 @@ public abstract class Tweet implements Tweetable {
 
     private String message;
     private Date date;
-    //private List<Mood> moods;
+    private List<Mood> moods;
 
     public Tweet(String message) {
         this.message = message;
