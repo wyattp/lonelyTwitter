@@ -28,6 +28,11 @@ import android.widget.Toast;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+/**
+ * Main activity for lonely twitter.
+ *
+ * @author Unknown
+ */
 public class LonelyTwitterActivity extends Activity {
 
 	private static final String FILENAME = "tweet_list.sav";
@@ -37,7 +42,11 @@ public class LonelyTwitterActivity extends Activity {
 	private ArrayList<Tweet> tweetList;
 	private ArrayAdapter<Tweet> adapter;
 	
-	/** Called when the activity is first created. */
+	/**
+	 * Called when the activity is first created.
+	 *
+	 * @param savedInstanceState saved instance state.
+	 */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -75,6 +84,9 @@ public class LonelyTwitterActivity extends Activity {
 
 	}
 
+	/**
+	 * Run on app start. Loads persistent data from file.
+	 */
 	@Override
 	protected void onStart() {
 
@@ -89,6 +101,9 @@ public class LonelyTwitterActivity extends Activity {
 
 	}
 
+	/**
+	 * Loads the tweet data from file.
+	 */
 	private void loadFromFile() {
 		try {
 			FileInputStream fis = openFileInput(FILENAME);
@@ -105,7 +120,10 @@ public class LonelyTwitterActivity extends Activity {
 			throw new RuntimeException();
 		}
 	}
-	
+
+	/**
+	 * Save tweet data to file. Overwrites the previously stored data.
+	 */
 	private void saveInFile() {
 		try {
 			FileOutputStream fos = openFileOutput(FILENAME,
@@ -124,6 +142,9 @@ public class LonelyTwitterActivity extends Activity {
 		}
 	}
 
+	/**
+	 * Clear the list view of tweets and save the empty array to file.
+	 */
 	public void clearTweets() {
         tweetList.clear();
         adapter.notifyDataSetChanged();
